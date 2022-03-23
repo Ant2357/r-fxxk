@@ -67,6 +67,7 @@ class Brainfuck
       when :put
         output << cell[ptr].chr
       when :get
+        cell[ptr] = $stdin.getc
       when :opn
         if cell[ptr] == 0
           open_count = 1
